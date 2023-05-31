@@ -1,0 +1,40 @@
+### Create employee test
+POST https://localhost:6443/v1/employee
+Content-Type: application/json
+
+{
+  "first_name": "John",
+  "last_name": "Doe",
+  "email": "john@mymail.com",
+  "age": 30,
+  "department": "IT",
+  "salary": 20000
+}
+
+### Filter employee
+POST https://localhost:6443/v1/employee/filter
+Content-Type: application/json
+
+{
+  "filters": [
+    {
+      "field": "first_name",
+      "value": "ohn"
+    },
+    {
+      "field": "salary",
+      "from_value": 10000,
+      "to_value": 20000
+    }
+  ],
+  "option": {
+    "limit": 10,
+    "offset": 0,
+    "sorts": [
+      {
+        "field": "employee_code",
+        "order": "desc"
+      }
+    ]
+  }
+}
