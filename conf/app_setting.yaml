@@ -7,8 +7,8 @@ health-check-endpoint: "/v1/health"
 https-only: false
 ssl-enable: true
 ssl-port: 6443
-ssl-cert-file: "./cert/localhost.crt"
-ssl-key-file: "./cert/localhost.key"
+ssl-cert-file: "./certs/localhost.crt"
+ssl-key-file: "./certs/localhost.key"
 
 #setting log file location if empty will log to stdout only
 log-file-location: "./logs/app.log"
